@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Manrope, Space_Grotesk, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
+import 'remixicon/fonts/remixicon.css';
 import Navbar from './components/Navbar';
 import { Providers } from './Providers';
 
