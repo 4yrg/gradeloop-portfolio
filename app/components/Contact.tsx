@@ -184,7 +184,7 @@ const Contact = () => {
             </div>
 
             {/* Map Placeholder Image */}
-            <div className="rounded-3xl overflow-hidden border border-outline/30 shadow-xl bg-surface-container group">
+            <div className="rounded-3xl overflow-hidden border border-outline/30 shadow-xl bg-surface-container group mt-10">
               <a
                 href="https://maps.app.goo.gl/UEFek65tWLanw8Pg9"
                 target="_blank"

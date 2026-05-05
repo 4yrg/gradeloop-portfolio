@@ -8,8 +8,8 @@ const Footer = () => {
         <div className="flex flex-col items-center text-center">
           {/* Logo */}
           <div className="flex items-center gap-2 mb-4 group cursor-default">
-            <span className="text-2xl font-black tracking-tight text-foreground font-display">
-              Grade<span className="text-primary">Loop</span>
+            <span className="text-primary text-2xl font-extrabold tracking-tight text-foreground font-display">
+              GradeLoop
             </span>
           </div>
 

@@ -111,12 +111,16 @@ const Achievements = () => {
                 <div className="flex items-center gap-2">
                   <div
                     className={`w-2 h-2 rounded-full ${
-                      item.status === 'Accepted' ? 'bg-green-500 animate-pulse' : 'bg-amber-500'
+                      item.status === 'Accepted'
+                        ? 'bg-green-500 animate-pulse'
+                        : 'bg-amber-500'
                     }`}
                   />
                   <span
                     className={`text-[10px] font-bold uppercase tracking-tighter ${
-                      item.status === 'Accepted' ? 'text-green-600 dark:text-green-400' : 'text-amber-600 dark:text-amber-400'
+                      item.status === 'Accepted'
+                        ? 'text-green-600 dark:text-green-400'
+                        : 'text-amber-600 dark:text-amber-400'
                     }`}
                   >
                     {item.status}

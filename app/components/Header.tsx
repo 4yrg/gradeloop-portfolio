@@ -3,10 +3,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Rocket, ArrowRight, Zap, Code, CheckCircle, Cpu } from 'lucide-react';
+import Terminal from './ui/Terminal';
 
 const Header = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-background transition-colors duration-500 snap-start">
+    <section className="dark relative min-h-screen flex items-center overflow-hidden pt-20 bg-background transition-colors duration-500 snap-start">
       {/* Background Gradients & Glows - Theme Aware */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[120px] dark:bg-primary/20" />
@@ -74,65 +75,7 @@ const Header = () => {
             className="relative"
           >
             {/* Terminal Window */}
-            <div className="relative z-10 bg-[#020d06] dark:bg-[#010804] border border-primary/20 rounded-2xl shadow-2xl overflow-hidden">
-              <div className="bg-[#1c2233]/50 px-5 py-3 flex items-center gap-1.5 border-b border-white/5">
-                <div className="w-3 h-3 rounded-full bg-[#ff5f57]" />
-                <div className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
-                <div className="w-3 h-3 rounded-full bg-[#28c840]" />
-                <span className="text-[11px] text-white/30 ml-4 font-mono uppercase tracking-widest">
-                  gradeloop_assess.py
-                </span>
-              </div>
-              <div className="p-8 font-mono text-[13px] leading-relaxed">
-                <div className="flex gap-4 mb-2">
-                  <span className="text-white/20">1</span>
-                  <span className="text-[#6a737d]">
-                    # GradeLoop AI Assessment Engine
-                  </span>
-                </div>
-                <div className="flex gap-4">
-                  <span className="text-white/20">2</span>
-                  <span className="text-white">
-                    <span className="text-[#f97583]">def</span>{' '}
-                    <span className="text-[#b392f0]">assess_submission</span>
-                    (code, rubric):
-                  </span>
-                </div>
-                <div className="flex gap-4">
-                  <span className="text-white/20">3</span>
-                  <span className="text-white ml-4">
-                    feedback ={' '}
-                    <span className="text-[#b392f0]">llm_analyze</span>(code)
-                  </span>
-                </div>
-                <div className="flex gap-4">
-                  <span className="text-white/20">4</span>
-                  <span className="text-white ml-4">
-                    score = <span className="text-[#b392f0]">evaluate</span>
-                    (feedback, rubric)
-                  </span>
-                </div>
-                <div className="flex gap-4">
-                  <span className="text-white/20">5</span>
-                  <span className="text-white ml-4">
-                    <span className="text-[#f97583]">return</span> feedback
-                  </span>
-                </div>
-                <div className="mt-6 flex items-center gap-2 text-[#28c840]">
-                  <CheckCircle size={14} />
-                  <span>Score: 87/100 | Feedback generated in 1.2s</span>
-                </div>
-                <div className="mt-2 flex items-center gap-2 text-primary">
-                  <Cpu size={14} />
-                  <span>3 actionable hints provided</span>
-                  <motion.span
-                    animate={{ opacity: [1, 0] }}
-                    transition={{ repeat: Infinity, duration: 1 }}
-                    className="w-2 h-4 bg-primary"
-                  />
-                </div>
-              </div>
-            </div>
+            <Terminal />
           </motion.div>
         </div>
       </div>
