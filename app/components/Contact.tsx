@@ -73,121 +73,123 @@ const Contact = () => {
       <div className="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-stretch">
           {/* Left Column: Header + Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-12 lg:pt-10"
+            className="flex flex-col justify-between h-full"
           >
-            <div>
-              <span className="inline-block px-1 py-1.5 text-primary text-[12px] font-bold uppercase tracking-wider mb-4">
-                Get In Touch
-              </span>
-              <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight font-display">
-                Contact Us
-              </h2>
-              <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
-                Have questions about our research or want to collaborate? We'd
-                love to hear from you.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 gap-8">
-              <div className="flex items-start gap-5 group">
-                <div className="w-12 h-12 rounded-2xl bg-surface-container border border-outline/30 flex items-center justify-center text-primary text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <i className="ri-mail-line"></i>
+            <div className="space-y-10">
+              <div>
+                <span className="inline-block px-1 py-1.5 text-primary text-[12px] font-bold uppercase tracking-wider mb-4">
+                  Get In Touch
+                </span>
+                <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight font-display">
+                  Contact Us
+                </h2>
+                <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
+                  Have questions about our research or want to collaborate? We'd
+                  love to hear from you.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 gap-6">
+                <div className="flex items-start gap-5 group">
+                  <div className="w-12 h-12 rounded-2xl bg-surface-container border border-outline/30 flex items-center justify-center text-primary text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <i className="ri-mail-line"></i>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-text-muted uppercase tracking-widest mb-1">
+                      Email
+                    </p>
+                    <a
+                      href="mailto:gradeloop.app@gmail.com"
+                      className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      gradeloop.app@gmail.com
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-xs font-bold text-text-muted uppercase tracking-widest mb-1">
-                    Email
-                  </p>
-                  <a
-                    href="mailto:gradeloop.app@gmail.com"
-                    className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                  >
-                    gradeloop.app@gmail.com
-                  </a>
+
+                <div className="flex items-start gap-5 group">
+                  <div className="w-12 h-12 rounded-2xl bg-surface-container border border-outline/30 flex items-center justify-center text-primary text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <i className="ri-phone-line"></i>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-text-muted uppercase tracking-widest mb-1">
+                      Phone
+                    </p>
+                    <a
+                      href="tel:+94703164695"
+                      className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                    >
+                      (+94) 70 316 4695
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-5 group">
+                  <div className="w-12 h-12 rounded-2xl bg-surface-container border border-outline/30 flex items-center justify-center text-primary text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                    <i className="ri-map-pin-line"></i>
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-text-muted uppercase tracking-widest mb-1">
+                      Location
+                    </p>
+                    <p className="text-lg font-medium text-foreground">
+                      SLIIT, Malabe, Sri Lanka
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex items-start gap-5 group">
-                <div className="w-12 h-12 rounded-2xl bg-surface-container border border-outline/30 flex items-center justify-center text-primary text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <i className="ri-phone-line"></i>
+              {/* Socials */}
+              <div className="pt-4">
+                <p className="text-xs font-bold text-text-muted uppercase tracking-widest mb-4">
+                  Follow Us
+                </p>
+                <div className="flex gap-4">
+                  {[
+                    {
+                      icon: 'ri-twitter-x-fill',
+                      link: 'https://x.com/sliitcomputing',
+                    },
+                    {
+                      icon: 'ri-linkedin-fill',
+                      link: 'https://www.linkedin.com/in/sri-lanka-institute-of-information-technology-sliit-3598b3106/',
+                    },
+                    {
+                      icon: 'ri-github-fill',
+                      link: 'https://github.com/sliitsesc',
+                    },
+                    {
+                      icon: 'ri-facebook-fill',
+                      link: 'https://www.facebook.com/sliit.lk/',
+                    },
+                  ].map((social, i) => (
+                    <a
+                      key={i}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 rounded-xl bg-surface-container border border-outline/30 flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm"
+                    >
+                      <i className={social.icon}></i>
+                    </a>
+                  ))}
                 </div>
-                <div>
-                  <p className="text-xs font-bold text-text-muted uppercase tracking-widest mb-1">
-                    Phone
-                  </p>
-                  <a
-                    href="tel:+94703164695"
-                    className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                  >
-                    (+94) 70 316 4695
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-5 group">
-                <div className="w-12 h-12 rounded-2xl bg-surface-container border border-outline/30 flex items-center justify-center text-primary text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                  <i className="ri-map-pin-line"></i>
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-text-muted uppercase tracking-widest mb-1">
-                    Location
-                  </p>
-                  <p className="text-lg font-medium text-foreground">
-                    SLIIT, Malabe, Sri Lanka
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Socials */}
-            <div className="pt-4">
-              <p className="text-xs font-bold text-text-muted uppercase tracking-widest mb-4">
-                Follow Us
-              </p>
-              <div className="flex gap-4">
-                {[
-                  {
-                    icon: 'ri-twitter-x-fill',
-                    link: 'https://x.com/sliitcomputing',
-                  },
-                  {
-                    icon: 'ri-linkedin-fill',
-                    link: 'https://www.linkedin.com/in/sri-lanka-institute-of-information-technology-sliit-3598b3106/',
-                  },
-                  {
-                    icon: 'ri-github-fill',
-                    link: 'https://github.com/sliitsesc',
-                  },
-                  {
-                    icon: 'ri-facebook-fill',
-                    link: 'https://www.facebook.com/sliit.lk/',
-                  },
-                ].map((social, i) => (
-                  <a
-                    key={i}
-                    href={social.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-xl bg-surface-container border border-outline/30 flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-sm"
-                  >
-                    <i className={social.icon}></i>
-                  </a>
-                ))}
               </div>
             </div>
 
             {/* Map Placeholder Image */}
-            <div className="rounded-3xl overflow-hidden border border-outline/30 shadow-xl bg-surface-container group mt-8">
+            <div className="rounded-3xl overflow-hidden border border-outline/30 shadow-xl bg-surface-container group">
               <a
                 href="https://maps.app.goo.gl/UEFek65tWLanw8Pg9"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative h-[320px] w-full block overflow-hidden"
+                className="relative h-[300px] w-full block overflow-hidden"
               >
                 <Image
                   src="https://webasset.sliit.lk/web/SLIIT-malabe_1769743861.jpg"
