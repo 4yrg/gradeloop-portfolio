@@ -3,15 +3,19 @@ import Scope from './components/Scope';
 import Milestone from './components/Milestone';
 import Downloads from './components/Download';
 import Team from './components/Team';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <main>
+    <main className="h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
       <Header />
       <Scope />
       <Milestone />
       <Downloads />
       <Team />
+      <Contact />
+      <Footer />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const scopeItems = [
   {
@@ -60,7 +60,7 @@ const Scope = () => {
   const [activeTab, setActiveTab] = useState(scopeItems[0]);
 
   return (
-    <section id="scope" className="py-24 px-6 lg:px-8 bg-background">
+    <section id="scope" className="py-24 px-6 lg:px-8 bg-background snap-start">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -70,7 +70,7 @@ const Scope = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 text-left"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[12px] font-bold uppercase tracking-wider mb-4 border border-primary/20">
+          <span className="inline-block px-0 py-1.5 text-primary text-[12px] font-bold uppercase tracking-wider mb-4">
             Research Scope
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight font-display">

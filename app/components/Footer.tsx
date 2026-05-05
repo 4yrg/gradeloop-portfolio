@@ -1,0 +1,55 @@
+'use client';
+
+import React from 'react';
+const Footer = () => {
+  return (
+    <footer className="bg-background border-t border-outline/30 pt-20 pb-10 px-6 lg:px-8 snap-start">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-col items-center text-center">
+          {/* Logo */}
+          <div className="flex items-center gap-2 mb-4 group cursor-default">
+            <span className="text-2xl font-black tracking-tight text-foreground font-display">
+              Grade<span className="text-primary">Loop</span>
+            </span>
+          </div>
+
+          {/* Subtitle */}
+          <p className="text-text-muted text-sm md:text-base max-w-2xl mb-8 leading-relaxed">
+            Automate Assessment, Elevate Learning — SLIIT Research Project
+            2024–2025
+          </p>
+
+          {/* Links */}
+          <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-8">
+            {[
+              { name: 'Home', href: '#home' },
+              { name: 'Scope', href: '#scope' },
+              { name: 'Milestones', href: '#milestones' },
+              { name: 'Downloads', href: '#downloads' },
+              { name: 'Team', href: '#team' },
+              { name: 'Achievements', href: '#achievements' },
+              { name: 'Contact', href: '#contact' },
+            ].map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-text-muted hover:text-primary transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
+
+          {/* Copyright */}
+          <div className="pt-8 border-t border-outline/20 w-full">
+            <p className="text-xs font-medium text-text-muted">
+              © 2025 GradeLoop Research Team — SLIIT. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

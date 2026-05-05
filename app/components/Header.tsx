@@ -6,7 +6,7 @@ import { Rocket, ArrowRight, Zap, Code, CheckCircle, Cpu } from 'lucide-react';
 
 const Header = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-background transition-colors duration-500">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20 bg-background transition-colors duration-500 snap-start">
       {/* Background Gradients & Glows - Theme Aware */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[120px] dark:bg-primary/20" />

@@ -8,7 +8,7 @@ const Download = () => {
   return (
     <section
       id="downloads"
-      className="py-24 px-6 lg:px-8 bg-primary-container/30 relative overflow-hidden"
+      className="py-24 px-6 lg:px-8 bg-primary-container/30 relative overflow-hidden snap-start"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
@@ -18,7 +18,7 @@ const Download = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 text-left"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[12px] font-bold uppercase tracking-wider mb-4 border border-primary/20">
+          <span className="inline-block px-0 py-1.5 text-primary text-[12px] font-bold uppercase tracking-wider mb-4">
             Resources
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight font-display">
