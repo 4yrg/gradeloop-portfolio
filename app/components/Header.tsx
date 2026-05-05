@@ -7,7 +7,7 @@ import Terminal from './ui/Terminal';
 
 const Header = () => {
   return (
-    <section className="dark relative min-h-screen flex items-center overflow-hidden pt-20 bg-background transition-colors duration-500 snap-start">
+    <section className="dark relative min-h-screen flex items-center overflow-hidden pt-20 bg-background transition-colors duration-500">
       {/* Background Gradients & Glows - Theme Aware */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/10 blur-[120px] dark:bg-primary/20" />
@@ -45,6 +45,25 @@ const Header = () => {
                   & Personalized Programming Feedback
                 </span>
               </h1>
+            </div>
+
+            <div className="flex flex-wrap gap-4 mb-12">
+              <a 
+                href="https://github.com/4yrg/gradeloop-core-v2" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-8 py-4 rounded-2xl bg-primary text-on-primary font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300"
+              >
+                <i className="ri-github-fill text-xl"></i>
+                View on GitHub
+              </a>
+              <button 
+                onClick={() => document.getElementById('scope')?.scrollIntoView({ behavior: 'smooth' })}
+                className="flex items-center gap-2 px-8 py-4 rounded-2xl bg-surface-container border border-outline text-foreground font-bold hover:bg-surface-container/80 hover:-translate-y-1 transition-all duration-300"
+              >
+                Explore Project
+                <ArrowRight size={20} />
+              </button>
             </div>
 
             {/* Stats */}

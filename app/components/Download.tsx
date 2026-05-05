@@ -25,7 +25,7 @@ const Download = () => {
   return (
     <section
       id="downloads"
-      className="py-24 px-6 lg:px-8 bg-primary-container/30 relative overflow-hidden snap-start"
+      className="py-24 px-6 lg:px-8 bg-primary-container/30 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
@@ -77,7 +77,7 @@ const Download = () => {
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             {filteredDocs.map((doc, index) => (
               <motion.div
                 key={doc.id}

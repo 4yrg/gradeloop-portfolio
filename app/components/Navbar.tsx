@@ -10,6 +10,7 @@ import { useTheme } from 'next-themes';
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'Scope', href: '#scope' },
+  { name: 'Components', href: '#components' },
   { name: 'Milestones', href: '#milestones' },
   {
     name: 'Downloads',
@@ -54,10 +55,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`dark fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? 'bg-background/70 backdrop-blur-xl border-b border-outline py-3 shadow-sm'
-          : 'bg-transparent py-5'
+          : 'bg-background/20 backdrop-blur-md py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">

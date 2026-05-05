@@ -15,34 +15,43 @@ const docs: Document[] = [
     id: 'research-paper',
     title: 'Research Paper',
     description:
-      'Full research paper on Adaptive Feedback Loops in CS Pedagogy submitted to ICCE 2025.',
+      'Full research paper on "Scalable Hybrid LSH-Based Framework for Structural Code Clone Detection" accepted at ICHORA 2026.',
     icon: 'ri-file-text-line',
+    isComingSoon: true,
+    category: 'document',
+  },
+  {
+    id: 'taf-form',
+    title: 'TAF (Topic Application Form)',
+    description:
+      'The initial Topic Application Form (TAF) defining the research problem and proposed area of study.',
+    icon: 'ri-file-list-3-line',
     isComingSoon: false,
     category: 'document',
     downloadUrl:
-      'https://drive.google.com/file/d/1OyCfPKd0Wrp2ChWxPNFbvwf_pJOlmpMW/view?usp=sharing',
+      'https://drive.google.com/file/d/1BXpFpRhHC4YM4KXIchLhpE776M8Cv0QN/view?usp=sharing',
   },
   {
-    id: 'project-proposal',
-    title: 'Project Proposal',
+    id: 'proposal-docs',
+    title: 'Proposal Documentation',
     description:
-      'Initial project proposal and scope documentation submitted in February 2024.',
+      'Comprehensive project proposal and detailed scope documentation submitted for academic approval.',
     icon: 'ri-file-chart-line',
     isComingSoon: false,
     category: 'document',
     downloadUrl:
-      'https://drive.google.com/drive/folders/1-Zt-clmrWTrniwOdKVHu8ucvhP6yGgH4?usp=sharing',
+      'https://drive.google.com/drive/folders/1iEimQ-O24DPU7NSwLf35UV8XPHX8HE6f?usp=sharing',
   },
   {
-    id: 'literature-review',
-    title: 'Literature Review',
+    id: 'final-reports',
+    title: 'Final Reports',
     description:
-      'Comprehensive review of 50+ academic papers on automated code assessment and ML in education.',
-    icon: 'ri-book-read-line',
+      'Complete project documentation, final research findings, and comprehensive system implementation reports.',
+    icon: 'ri-file-zip-line',
     isComingSoon: false,
     category: 'document',
     downloadUrl:
-      'https://drive.google.com/drive/folders/18LRMf-SN1xftPo6C2FAfwn5wQ3Z-it9u?usp=sharing',
+      'https://drive.google.com/drive/folders/16LQAFUlhpBJ3Lmp35-vSjS-WcSbGZyeT?usp=drive_link',
   },
 ];
 

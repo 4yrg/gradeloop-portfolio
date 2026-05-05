@@ -10,7 +10,7 @@ export const presentations: Document[] = [
     isComingSoon: false,
     category: 'presentation',
     downloadUrl:
-      'https://drive.google.com/drive/folders/17nF2Sfg1rUt48d0JUxbmBTj5loSxUNNj?usp=drive_link',
+      'https://drive.google.com/file/d/13-CwnqIESEsdH_Ym4zh5wH-8tZCO5cDK/view?usp=sharing',
   },
   {
     id: 'progress-presentation-1',
@@ -21,7 +21,7 @@ export const presentations: Document[] = [
     isComingSoon: false,
     category: 'presentation',
     downloadUrl:
-      'https://drive.google.com/drive/folders/1r5MclIsZsUwIaFJSK9KSuInNXF5jUolK?usp=drive_link',
+      'https://drive.google.com/file/d/1KYrQJT_n50DpMLSxLd5i-UgBCpe5ZuUw/view?usp=sharing',
   },
   {
     id: 'progress-presentation-2',
@@ -32,7 +32,7 @@ export const presentations: Document[] = [
     isComingSoon: false,
     category: 'presentation',
     downloadUrl:
-      'https://drive.google.com/drive/folders/1Xkqc4wGRTvM8L2r8iWdLbeyyY0QxVJgy?usp=drive_link',
+      'https://drive.google.com/file/d/1rw8Htl7PgaGzl1Su9MjqEOu0j9AuSfY1/view?usp=sharing',
   },
   {
     id: 'final-presentation',
@@ -40,9 +40,7 @@ export const presentations: Document[] = [
     description:
       'Comprehensive final presentation deck detailing the complete implementation, results, and future enhancements.',
     icon: 'ri-slideshow-3-line',
-    isComingSoon: false,
+    isComingSoon: true,
     category: 'presentation',
-    downloadUrl:
-      'https://drive.google.com/drive/folders/1_34Yf_f_VpgsFEd6r0ijwZqzYHknVxwZ?usp=drive_link',
   },
 ];

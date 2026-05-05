@@ -66,7 +66,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-24 px-6 lg:px-8 bg-background relative overflow-hidden snap-start"
+      className="py-24 px-6 lg:px-8 bg-background relative overflow-hidden"
     >
       {/* Background Decorative Element */}
       <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px] pointer-events-none" />

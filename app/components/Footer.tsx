@@ -3,7 +3,7 @@
 import React from 'react';
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-outline/30 pt-20 pb-10 px-6 lg:px-8 snap-start">
+    <footer className="dark bg-background border-t border-outline/30 pt-20 pb-10 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col items-center text-center">
           {/* Logo */}
@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Subtitle */}
           <p className="text-text-muted text-sm md:text-base max-w-2xl mb-8 leading-relaxed">
             Automate Assessment, Elevate Learning — SLIIT Research Project
-            2024–2025
+            2025-2026
           </p>
 
           {/* Links */}
@@ -53,7 +53,7 @@ const Footer = () => {
               },
               {
                 icon: 'ri-github-fill',
-                link: 'https://github.com/sliitsesc',
+                link: 'https://github.com/4yrg/gradeloop-core-v2',
               },
               {
                 icon: 'ri-facebook-fill',

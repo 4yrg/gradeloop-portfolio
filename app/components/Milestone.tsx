@@ -5,58 +5,58 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const milestones = [
   {
-    date: 'January 2024',
+    date: 'January 2025',
     title: 'Project Initiation',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'February 2024',
+    date: 'February 2025',
     title: 'TAF Submission',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'March 2024',
+    date: 'March 2025',
     title: 'Proposal Presentation',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'May 2024',
+    date: 'May 2025',
     title: 'Progress Presentation 1',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'August 2024',
+    date: 'August 2025',
     title: 'Progress Presentation 2',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'October 2024',
+    date: 'October 2025',
     title: 'Research Paper Submission',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'December 2024',
+    date: 'December 2025',
     title: 'Final System Completion',
-    status: 'in-progress',
-    statusLabel: 'In Progress',
+    status: 'completed',
+    statusLabel: 'Completed',
   },
   {
-    date: 'January 2025',
+    date: 'January 2026',
     title: 'Website Launch',
-    status: 'in-progress',
-    statusLabel: 'In Progress',
+    status: 'completed',
+    statusLabel: 'Completed',
   },
   {
-    date: 'February 2025',
+    date: 'May 6th 2026',
     title: 'Final Presentation',
-    status: 'upcoming',
-    statusLabel: 'Upcoming',
+    status: 'in-progress',
+    statusLabel: 'In Progress',
   },
 ];
 
@@ -73,7 +73,7 @@ const Milestone = () => {
     <section
       id="milestones"
       ref={containerRef}
-      className="py-24 px-6 lg:px-8 bg-background overflow-hidden snap-start"
+      className="py-24 px-6 lg:px-8 bg-background bg-green-pattern overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         <motion.div

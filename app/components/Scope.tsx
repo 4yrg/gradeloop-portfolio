@@ -12,13 +12,6 @@ const scopeItems = [
     icon: 'ri-clipboard-line',
   },
   {
-    id: 'literature',
-    title: 'Literature Review',
-    description:
-      'Our extensive literature review covers recent advancements in automated code assessment and machine learning applications in education. We analyzed over 50 academic papers to establish a robust foundation for GradeLoop.',
-    icon: 'ri-book-read-line',
-  },
-  {
     id: 'gap',
     title: 'Research Gap',
     description:
@@ -60,7 +53,7 @@ const Scope = () => {
   const [activeTab, setActiveTab] = useState(scopeItems[0]);
 
   return (
-    <section id="scope" className="py-24 px-6 lg:px-8 bg-background snap-start">
+    <section id="scope" className="py-24 px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
