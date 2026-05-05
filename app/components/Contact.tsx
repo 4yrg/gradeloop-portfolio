@@ -182,22 +182,39 @@ const Contact = () => {
             </div>
 
             {/* Map Placeholder Image */}
-            <div className="rounded-3xl overflow-hidden border border-outline/30 shadow-xl bg-surface-container group">
-              <div className="relative h-[240px] w-full">
+            <div className="rounded-3xl overflow-hidden border border-outline/30 shadow-xl bg-surface-container group mt-8">
+              <a
+                href="https://maps.app.goo.gl/UEFek65tWLanw8Pg9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative h-[260px] w-full block overflow-hidden"
+              >
                 <Image
                   src="https://webasset.sliit.lk/web/SLIIT-malabe_1769743861.jpg"
                   alt="SLIIT Campus"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
-                <div className="absolute bottom-4 left-6 right-6">
-                  <p className="text-white text-sm font-medium flex items-center gap-2">
-                    <i className="ri-map-pin-2-fill text-primary"></i>
-                    Sri Lanka Institute of Information Technology, Malabe
-                  </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
+                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl transform transition-all duration-500 group-hover:-translate-y-2">
+                  <div className="flex items-center gap-4">
+                    <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-lg shadow-primary/20">
+                      <i className="ri-map-pin-2-fill text-xl"></i>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-white text-xs font-bold uppercase tracking-widest opacity-70 mb-0.5">
+                        Our Location
+                      </p>
+                      <p className="text-white text-sm font-extrabold truncate">
+                        SLIIT Malabe Campus, Sri Lanka
+                      </p>
+                    </div>
+                    <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/50 group-hover:text-white group-hover:bg-primary transition-all">
+                      <i className="ri-arrow-right-up-line"></i>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </motion.div>
 
