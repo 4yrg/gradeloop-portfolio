@@ -68,13 +68,18 @@ const Scope = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 text-left"
         >
-          <h2 className="text-4xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight font-display">
-            Project Scope
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[12px] font-bold uppercase tracking-wider mb-4 border border-primary/20">
+            Research Scope
+          </span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight font-display">
+            A Comprehensive Research Initiative
           </h2>
-          <p className="text-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
-            A comprehensive architectural and pedagogical overview of our research initiative.
+          <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
+            Exploring the intersection of artificial intelligence, automated
+            assessment, and pedagogical innovation in computer science
+            education.
           </p>
         </motion.div>
 

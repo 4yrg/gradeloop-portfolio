@@ -72,12 +72,15 @@ const Milestone = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-16 text-left"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight text-center font-display">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-[12px] font-bold uppercase tracking-wider mb-4 border border-primary/20">
+            Progress
+          </span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight font-display">
             Project Milestones
           </h2>
-          <p className="text-lg text-text-muted max-w-2xl text-center leading-relaxed mx-auto">
+          <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
             Tracking our journey from inception to launch with structured
             research milestones and deliverables.
           </p>
