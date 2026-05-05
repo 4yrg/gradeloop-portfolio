@@ -9,6 +9,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
+    title: '',
     email: '',
     subject: '',
     message: '',
@@ -38,8 +39,9 @@ const Contact = () => {
         SERVICE_ID,
         TEMPLATE_ID,
         {
-          from_name: `${formData.firstName} ${formData.lastName}`,
+          from_name: `${formData.title} ${formData.firstName} ${formData.lastName}`,
           from_email: formData.email,
+          title: formData.title,
           subject: formData.subject,
           message: formData.message,
           reply_to: formData.email,
@@ -51,6 +53,7 @@ const Contact = () => {
       setFormData({
         firstName: '',
         lastName: '',
+        title: '',
         email: '',
         subject: '',
         message: '',
@@ -232,6 +235,30 @@ const Contact = () => {
               Send us a Message
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="space-y-2">
+                <label
+                  htmlFor="title"
+                  className="text-xs font-bold text-text-muted uppercase tracking-wider ml-1"
+                >
+                  Title
+                </label>
+                <select
+                  id="title"
+                  name="title"
+                  value={formData.title}
+                  onChange={handleChange as any}
+                  required
+                  className="w-full px-5 py-4 rounded-2xl bg-background border border-outline/30 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 appearance-none"
+                >
+                  <option value="" disabled>Select Title</option>
+                  <option value="Mr.">Mr.</option>
+                  <option value="Ms.">Ms.</option>
+                  <option value="Mrs.">Mrs.</option>
+                  <option value="Dr.">Dr.</option>
+                  <option value="Prof.">Prof.</option>
+                </select>
+              </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label
