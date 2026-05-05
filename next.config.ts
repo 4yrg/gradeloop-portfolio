@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'webasset.sliit.lk',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.ijiet.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.wixstatic.com',
+      },
     ],
   },
 };
