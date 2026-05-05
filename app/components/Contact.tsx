@@ -80,7 +80,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-12"
+            className="space-y-12 lg:pt-10"
           >
             <div>
               <span className="inline-block px-1 py-1.5 text-primary text-[12px] font-bold uppercase tracking-wider mb-4">
@@ -94,7 +94,7 @@ const Contact = () => {
                 love to hear from you.
               </p>
             </div>
-            <div className="grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 gap-8">
               <div className="flex items-start gap-5 group">
                 <div className="w-12 h-12 rounded-2xl bg-surface-container border border-outline/30 flex items-center justify-center text-primary text-xl group-hover:bg-primary group-hover:text-white transition-all duration-300">
                   <i className="ri-mail-line"></i>
@@ -187,7 +187,7 @@ const Contact = () => {
                 href="https://maps.app.goo.gl/UEFek65tWLanw8Pg9"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative h-[260px] w-full block overflow-hidden"
+                className="relative h-[320px] w-full block overflow-hidden"
               >
                 <Image
                   src="https://webasset.sliit.lk/web/SLIIT-malabe_1769743861.jpg"
