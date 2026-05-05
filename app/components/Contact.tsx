@@ -29,12 +29,9 @@ const Contact = () => {
     e.preventDefault();
     setStatus('loading');
 
-    // NOTE: You need to create an account at https://www.emailjs.com/
-    // and replace these placeholders with your actual IDs.
-    // The account email is set to: acc.dasunw@gmail.com
-    const SERVICE_ID = 'service_gradeloop'; // Replace with your Service ID
-    const TEMPLATE_ID = 'template_gradeloop'; // Replace with your Template ID
-    const PUBLIC_KEY = 'YOUR_PUBLIC_KEY'; // Replace with your Public Key
+    const SERVICE_ID = 'service_6150xyj';
+    const TEMPLATE_ID = 'template_yep8e1c';
+    const PUBLIC_KEY = 'feYQNx0qagZO1OHXB';
 
     try {
       await emailjs.send(
