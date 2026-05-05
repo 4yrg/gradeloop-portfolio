@@ -11,11 +11,11 @@ const achievements = [
     description:
       'Our core research on "Adaptive Feedback Loops in CS Pedagogy" has been accepted for presentation at leading educational technology conferences.',
     logo: 'ICCE',
-    logoUrl: 'https://static.wixstatic.com/media/be012b_c4be96186b19444e8737df09a53cf251~mv2.jpg/v1/fill/w_89,h_50,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/22773143_chennai_edited_edited.jpg',
+    logoUrl:
+      'https://static.wixstatic.com/media/be012b_c4be96186b19444e8737df09a53cf251~mv2.jpg/v1/fill/w_89,h_50,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/22773143_chennai_edited_edited.jpg',
     name: 'ICCE 2025',
     subName: 'International Conference on Computers in Education',
     status: 'Accepted',
-    statusColor: 'text-green-500 bg-green-500/10 border-green-500/20',
     icon: 'ri-trophy-fill',
   },
   {
@@ -28,14 +28,16 @@ const achievements = [
     name: 'IJET Journal',
     subName: 'International Journal of Educational Technology',
     status: 'Under Review',
-    statusColor: 'text-amber-500 bg-amber-500/10 border-amber-500/20',
     icon: 'ri-book-open-fill',
   },
 ];
 
 const Achievements = () => {
   return (
-    <section id="achievements" className="py-24 px-6 lg:px-8 bg-background snap-start">
+    <section
+      id="achievements"
+      className="py-24 px-6 lg:px-8 bg-background snap-start"
+    >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -80,27 +82,45 @@ const Achievements = () => {
               <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors duration-300">
                 {item.title}
               </h3>
-              
+
               <p className="text-text-muted mb-8 leading-relaxed">
                 {item.description}
               </p>
 
               {/* Status Badge Container */}
-              <div className="mt-auto p-5 rounded-2xl bg-background/50 border border-outline/20 flex items-center gap-4">
-                <div className="w-14 h-14 rounded-xl bg-white p-2 flex items-center justify-center border border-outline/10 shadow-inner overflow-hidden relative">
-                  <Image
-                    src={item.logoUrl}
-                    alt={item.logo}
-                    fill
-                    className="object-contain p-1"
+              <div className="mt-auto flex items-center justify-between gap-4 pt-6 border-t border-outline/10">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-white p-2 flex items-center justify-center border border-outline/5 shadow-sm overflow-hidden relative">
+                    <Image
+                      src={item.logoUrl}
+                      alt={item.logo}
+                      fill
+                      className="object-contain p-1"
+                    />
+                  </div>
+                  <div className="flex flex-col">
+                    <h4 className="font-bold text-foreground text-sm leading-tight">
+                      {item.name}
+                    </h4>
+                    <p className="text-[11px] text-text-muted">
+                      {item.subName}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <div
+                    className={`w-2 h-2 rounded-full ${
+                      item.status === 'Accepted' ? 'bg-green-500 animate-pulse' : 'bg-amber-500'
+                    }`}
                   />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="font-bold text-foreground truncate">{item.name}</h4>
-                  <p className="text-xs text-text-muted truncate">{item.subName}</p>
-                </div>
-                <div className={`px-3 py-1 rounded-full border text-[10px] font-bold uppercase tracking-widest ${item.statusColor}`}>
-                  {item.status}
+                  <span
+                    className={`text-[10px] font-bold uppercase tracking-tighter ${
+                      item.status === 'Accepted' ? 'text-green-600 dark:text-green-400' : 'text-amber-600 dark:text-amber-400'
+                    }`}
+                  >
+                    {item.status}
+                  </span>
                 </div>
               </div>
             </motion.div>

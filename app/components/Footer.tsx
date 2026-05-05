@@ -40,6 +40,38 @@ const Footer = () => {
             ))}
           </nav>
 
+          {/* Socials */}
+          <div className="flex gap-6 mb-10">
+            {[
+              {
+                icon: 'ri-twitter-x-fill',
+                link: 'https://x.com/sliitcomputing',
+              },
+              {
+                icon: 'ri-linkedin-fill',
+                link: 'https://www.linkedin.com/in/sri-lanka-institute-of-information-technology-sliit-3598b3106/',
+              },
+              {
+                icon: 'ri-github-fill',
+                link: 'https://github.com/sliitsesc',
+              },
+              {
+                icon: 'ri-facebook-fill',
+                link: 'https://www.facebook.com/sliit.lk/',
+              },
+            ].map((social, i) => (
+              <a
+                key={i}
+                href={social.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-muted hover:text-primary transition-colors text-xl"
+              >
+                <i className={social.icon}></i>
+              </a>
+            ))}
+          </div>
+
           {/* Copyright */}
           <div className="pt-8 border-t border-outline/20 w-full">
             <p className="text-xs font-medium text-text-muted">
