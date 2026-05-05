@@ -84,14 +84,15 @@ const Navbar = () => {
               className="w-10 h-10 flex items-center justify-center rounded-xl border border-outline bg-background/50 hover:border-primary hover:text-primary transition-all duration-300"
               aria-label="Toggle theme"
             >
-              {mounted && (theme === 'dark' ? (
-                <Sun size={18} />
-              ) : (
-                <Moon size={18} />
-              ))}
+              {mounted &&
+                (theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />)}
             </button>
-            <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            <button
+              onClick={() =>
+                document
+                  .getElementById('contact')
+                  ?.scrollIntoView({ behavior: 'smooth' })
+              }
               className="px-5 py-2 rounded-xl border border-outline bg-background/50 text-[14px] font-semibold text-foreground hover:border-primary hover:text-primary transition-all duration-300"
             >
               Contact
@@ -108,11 +109,8 @@ const Navbar = () => {
               className="w-10 h-10 flex items-center justify-center rounded-xl border border-outline bg-background/50"
               aria-label="Toggle theme"
             >
-              {mounted && (theme === 'dark' ? (
-                <Sun size={20} />
-              ) : (
-                <Moon size={20} />
-              ))}
+              {mounted &&
+                (theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />)}
             </button>
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -144,14 +142,19 @@ const Navbar = () => {
                   <span className="text-lg font-semibold text-text-muted group-hover:text-primary transition-colors">
                     {item.name}
                   </span>
-                  <ChevronRight size={18} className="text-outline group-hover:text-primary transition-colors group-hover:translate-x-1 duration-300" />
+                  <ChevronRight
+                    size={18}
+                    className="text-outline group-hover:text-primary transition-colors group-hover:translate-x-1 duration-300"
+                  />
                 </Link>
               ))}
               <div className="pt-8 space-y-4">
-                <button 
+                <button
                   onClick={() => {
                     setIsOpen(false);
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                    document
+                      .getElementById('contact')
+                      ?.scrollIntoView({ behavior: 'smooth' });
                   }}
                   className="w-full px-6 py-4 rounded-xl border border-outline font-bold text-foreground hover:border-primary hover:text-primary transition-all duration-300"
                 >
