@@ -5,44 +5,38 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 const milestones = [
   {
-    date: 'October 2024',
+    date: 'October 2025',
     title: 'Research Project Initiation',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'January 2025',
+    date: 'January 2026',
+    title: 'Literature Review & Gap Analysis',
+    status: 'completed',
+    statusLabel: 'Completed',
+  },
+  {
+    date: 'March 2026',
     title: 'Progress Presentation 1 (PP1)',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'March 2025',
+    date: 'March 2026',
     title: 'Progress Presentation 2 (PP2)',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'August 2025',
-    title: 'Core System Prototype',
-    status: 'completed',
-    statusLabel: 'Completed',
-  },
-  {
-    date: 'December 2025',
+    date: 'April 2026',
     title: 'Research Paper Submission',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'February 2026',
-    title: 'Integration & Testing',
-    status: 'completed',
-    statusLabel: 'Completed',
-  },
-  {
     date: 'April 2026',
-    title: 'Portfolio Website Launch',
+    title: 'System Integration & Portfolio Launch',
     status: 'completed',
     statusLabel: 'Completed',
   },
