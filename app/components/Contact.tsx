@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -30,24 +29,18 @@ const Contact = () => {
     e.preventDefault();
     setStatus('loading');
 
-    const SERVICE_ID = 'service_6150xyj';
-    const TEMPLATE_ID = 'template_yep8e1c';
-    const PUBLIC_KEY = 'feYQNx0qagZO1OHXB';
-
     try {
-      await emailjs.send(
-        SERVICE_ID,
-        TEMPLATE_ID,
-        {
-          from_name: `${formData.title} ${formData.firstName} ${formData.lastName}`,
-          from_email: formData.email,
-          title: formData.title,
-          subject: formData.subject,
-          message: formData.message,
-          reply_to: formData.email,
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        PUBLIC_KEY
-      );
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send email');
+      }
 
       setStatus('success');
       setFormData({
@@ -60,7 +53,7 @@ const Contact = () => {
       });
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('Contact Error:', error);
       setStatus('error');
       setTimeout(() => setStatus('idle'), 5000);
     }
