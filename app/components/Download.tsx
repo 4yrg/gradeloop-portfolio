@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { documents } from '../data/docs';
 
 const Download = () => {
-  const [activeTab, setActiveTab] = useState<'document' | 'presentation'>(
+  const [activeTab, setActiveTab] = useState<'document' | 'presentation' | 'checklist'>(
     'document'
   );
 
@@ -43,16 +43,16 @@ const Download = () => {
               Downloads
             </h2>
             <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
-              Access our comprehensive research documentation and presentation
-              materials.
+              Access our comprehensive research documentation, presentation
+              materials, and project checklists.
             </p>
           </motion.div>
 
           {/* Tabs UI */}
-          <div className="flex p-1 bg-surface-container/50 backdrop-blur-sm border border-outline/30 rounded-2xl w-fit">
+          <div className="flex flex-wrap gap-2 p-1 bg-surface-container/50 backdrop-blur-sm border border-outline/30 rounded-2xl w-fit">
             <button
               onClick={() => setActiveTab('document')}
-              className={`px-8 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 ${
+              className={`px-6 md:px-8 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 ${
                 activeTab === 'document'
                   ? 'bg-background dark:bg-surface-container-highest text-primary shadow-lg shadow-primary/5 border border-outline/10'
                   : 'text-text-muted hover:text-foreground'
@@ -62,13 +62,23 @@ const Download = () => {
             </button>
             <button
               onClick={() => setActiveTab('presentation')}
-              className={`px-8 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 ${
+              className={`px-6 md:px-8 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 ${
                 activeTab === 'presentation'
                   ? 'bg-background dark:bg-surface-container-highest text-primary shadow-lg shadow-primary/5 border border-outline/10'
                   : 'text-text-muted hover:text-foreground'
               }`}
             >
               Presentations
+            </button>
+            <button
+              onClick={() => setActiveTab('checklist')}
+              className={`px-6 md:px-8 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 ${
+                activeTab === 'checklist'
+                  ? 'bg-background dark:bg-surface-container-highest text-primary shadow-lg shadow-primary/5 border border-outline/10'
+                  : 'text-text-muted hover:text-foreground'
+              }`}
+            >
+              Checklists
             </button>
           </div>
         </div>
@@ -77,7 +87,7 @@ const Download = () => {
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
         >
-          <AnimatePresence>
+          <AnimatePresence mode="popLayout">
             {filteredDocs.map((doc, index) => (
               <motion.div
                 key={doc.id}

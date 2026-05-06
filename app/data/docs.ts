@@ -6,7 +6,7 @@ export interface Document {
   description: string;
   icon: string;
   isComingSoon: boolean;
-  category: 'document' | 'presentation';
+  category: 'document' | 'presentation' | 'checklist';
   downloadUrl?: string;
 }
 
@@ -52,6 +52,33 @@ const docs: Document[] = [
     category: 'document',
     downloadUrl:
       'https://drive.google.com/drive/folders/16LQAFUlhpBJ3Lmp35-vSjS-WcSbGZyeT?usp=drive_link',
+  },
+  {
+    id: 'checklist-01',
+    title: 'Checklist 01',
+    description: 'Initial review checklist for project milestones and compliance standards.',
+    icon: 'ri-checkbox-multiple-line',
+    isComingSoon: false,
+    category: 'checklist',
+    downloadUrl: 'https://drive.google.com/drive/folders/1f9BgcfE3tsoruAZW16GSFtY60y8lIsp9?usp=sharing',
+  },
+  {
+    id: 'checklist-02',
+    title: 'Checklist 02',
+    description: 'Secondary review checklist focusing on implementation and technical verification.',
+    icon: 'ri-checkbox-multiple-line',
+    isComingSoon: false,
+    category: 'checklist',
+    downloadUrl: 'https://drive.google.com/drive/folders/1KO0OyuOUoWY_qndKpTYvQdon2z6EcyuT?usp=sharing',
+  },
+  {
+    id: 'checklist-03',
+    title: 'Checklist 03',
+    description: 'Final submission checklist ensuring all academic and technical requirements are met.',
+    icon: 'ri-checkbox-multiple-line',
+    isComingSoon: false,
+    category: 'checklist',
+    downloadUrl: 'https://drive.google.com/drive/folders/18rDL34tPRRYBQdMviKlvY6qMHZn4Qqr8?usp=sharing',
   },
 ];
 
