@@ -71,7 +71,10 @@ const Team = () => {
                   <h4 className="text-2xl md:text-3xl font-bold text-foreground mb-2 font-display">
                     {member.name}
                   </h4>
-                  <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-primary hover:underline text-sm mb-4 font-medium">
+                  <a
+                    href={`mailto:${member.email}`}
+                    className="flex items-center gap-2 text-primary hover:underline text-sm mb-4 font-medium"
+                  >
                     <i className="ri-mail-fill"></i>
                     {member.email}
                   </a>
@@ -122,7 +125,10 @@ const Team = () => {
                     <span className="text-primary text-[13px] font-mono font-bold tracking-wider">
                       {member.role}
                     </span>
-                    <a href={`mailto:${member.email}`} className="flex items-center gap-1.5 text-text-muted hover:text-primary text-xs transition-colors">
+                    <a
+                      href={`mailto:${member.email}`}
+                      className="flex items-center gap-1.5 text-text-muted hover:text-primary text-xs transition-colors"
+                    >
                       <i className="ri-mail-line"></i>
                       {member.email}
                     </a>

@@ -244,7 +244,9 @@ const Contact = () => {
                   required
                   className="w-full px-5 py-4 rounded-2xl bg-background border border-outline/30 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 appearance-none"
                 >
-                  <option value="" disabled>Select Title</option>
+                  <option value="" disabled>
+                    Select Title
+                  </option>
                   <option value="Mr.">Mr.</option>
                   <option value="Ms.">Ms.</option>
                   <option value="Mrs.">Mrs.</option>

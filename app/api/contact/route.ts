@@ -3,11 +3,15 @@ import nodemailer from 'nodemailer';
 
 export async function POST(request: Request) {
   try {
-    const { title, firstName, lastName, email, subject, message } = await request.json();
+    const { title, firstName, lastName, email, subject, message } =
+      await request.json();
 
     if (!process.env.GMAIL_USER || !process.env.GMAIL_PASS) {
       console.error('ERROR: Missing GMAIL_USER or GMAIL_PASS in .env file');
-      return NextResponse.json({ error: 'Server configuration error' }, { status: 500 });
+      return NextResponse.json(
+        { error: 'Server configuration error' },
+        { status: 500 }
+      );
     }
 
     const transporter = nodemailer.createTransport({
@@ -177,7 +181,10 @@ export async function POST(request: Request) {
 
     await transporter.sendMail(mailOptions);
 
-    return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
+    return NextResponse.json(
+      { message: 'Email sent successfully' },
+      { status: 200 }
+    );
   } catch (error: any) {
     console.error('SMTP Error:', error);
     return NextResponse.json({ error: error.message }, { status: 500 });

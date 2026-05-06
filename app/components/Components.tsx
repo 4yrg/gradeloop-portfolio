@@ -56,7 +56,10 @@ const systemComponents = [
 
 const Components = () => {
   return (
-    <section id="components" className="py-24 px-6 lg:px-8 bg-background relative overflow-hidden">
+    <section
+      id="components"
+      className="py-24 px-6 lg:px-8 bg-background relative overflow-hidden"
+    >
       {/* Background Decorative Elements */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-primary/5 blur-[120px] rounded-full -mr-20 -mt-20" />
       <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-tertiary/5 blur-[100px] rounded-full -ml-20 -mb-20" />
@@ -68,16 +71,16 @@ const Components = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-20 text-center"
+          className="mb-16 text-left"
         >
-          <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-[12px] font-bold uppercase tracking-wider mb-4 border border-primary/20">
+          <span className="inline-block px-0 py-1.5 text-primary text-[12px] font-bold uppercase tracking-wider mb-4">
             System Architecture
           </span>
-          <h2 className="text-4xl md:text-6xl font-extrabold text-foreground mb-6 tracking-tight font-display">
-            Core System <span className="text-primary">Components</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-foreground mb-4 tracking-tight font-display">
+            Core System Components
           </h2>
-          <p className="text-xl text-text-muted max-w-3xl mx-auto leading-relaxed">
-            A modular ecosystem designed to handle every aspect of modern 
+          <p className="text-lg text-text-muted max-w-2xl leading-relaxed">
+            A modular ecosystem designed to handle every aspect of modern
             programming education and assessment with AI precision.
           </p>
         </motion.div>
@@ -93,11 +96,14 @@ const Components = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative"
             >
-              <div className={`h-full p-8 md:p-10 rounded-[2.5rem] bg-surface-container border border-outline/30 shadow-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-500 overflow-hidden relative`}
+              <div
+                className={`h-full p-8 md:p-10 rounded-[2.5rem] bg-surface-container border border-outline/30 shadow-xl hover:shadow-2xl hover:border-primary/40 hover:-translate-y-1.5 transition-all duration-500 overflow-hidden relative`}
               >
                 {/* Gradient Background Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${comp.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${comp.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                />
+
                 <div className="relative z-10">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
                     <div className="flex items-center gap-5">
@@ -119,15 +125,19 @@ const Components = () => {
                   <div className="mb-8 p-5 rounded-2xl bg-background/50 border border-outline/20 group-hover:bg-background/80 transition-colors">
                     <div className="flex items-center gap-2 mb-2">
                       <i className="ri-search-eye-line text-primary text-sm"></i>
-                      <span className="text-[10px] font-black uppercase tracking-widest text-primary/80">Research Gap</span>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-primary/80">
+                        Research Gap
+                      </span>
                     </div>
                     <p className="text-sm text-text-muted leading-relaxed italic">
-                      "{comp.gap}"
+                      &ldquo;{comp.gap}&rdquo;
                     </p>
                   </div>
 
                   <div className="mb-2">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-text-muted/60">Core Features</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-text-muted/60">
+                      Core Features
+                    </span>
                   </div>
                   <ul className="space-y-4">
                     {comp.features.map((feature, fIndex) => (

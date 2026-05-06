@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { documents } from '../data/docs';
 
 const Download = () => {
-  const [activeTab, setActiveTab] = useState<'document' | 'presentation' | 'checklist'>(
-    'document'
-  );
+  const [activeTab, setActiveTab] = useState<
+    'document' | 'presentation' | 'checklist'
+  >('document');
 
   const filteredDocs = documents.filter((doc) => doc.category === activeTab);
 

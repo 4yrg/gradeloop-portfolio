@@ -146,7 +146,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-3">
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="w-10 h-10 flex items-center justify-center rounded-xl border border-outline bg-background/50 hover:border-primary hover:text-primary transition-all duration-300"
+              className="w-10 h-10 flex items-center justify-center rounded-xl border border-outline bg-background/50 text-foreground hover:border-primary hover:text-primary transition-all duration-300"
               aria-label="Toggle theme"
             >
               {mounted &&
@@ -168,7 +168,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center gap-3">
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="w-10 h-10 flex items-center justify-center rounded-xl border border-outline bg-background/50"
+              className="w-10 h-10 flex items-center justify-center rounded-xl border border-outline bg-background/50 text-foreground hover:text-primary hover:border-primary transition-all duration-300"
               aria-label="Toggle theme"
             >
               {mounted &&

@@ -7,7 +7,8 @@ import Image from 'next/image';
 const achievements = [
   {
     type: 'Conference Acceptance',
-    title: 'Scalable Hybrid LSH-Based Framework for Structural Code Clone Detection',
+    title:
+      'Scalable Hybrid LSH-Based Framework for Structural Code Clone Detection',
     description:
       'Our research on advanced code clone detection using Locality Sensitive Hashing (LSH) has been accepted for presentation at ICHORA 2026.',
     logo: 'ICHORA',
@@ -24,10 +25,7 @@ const achievements = [
 
 const Achievements = () => {
   return (
-    <section
-      id="achievements"
-      className="py-24 px-6 lg:px-8 bg-background"
-    >
+    <section id="achievements" className="py-24 px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
@@ -111,14 +109,15 @@ const Achievements = () => {
                         {item.status}
                       </span>
                     </div>
-                    
-                    <a 
-                      href="https://ichoracongress.com/?go=accepted_papers" 
-                      target="_blank" 
+
+                    <a
+                      href="https://ichoracongress.com/?go=accepted_papers"
+                      target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary text-sm font-bold hover:underline flex items-center gap-1"
                     >
-                      View Accepted Papers <i className="ri-external-link-line"></i>
+                      View Accepted Papers{' '}
+                      <i className="ri-external-link-line"></i>
                     </a>
                   </div>
                 </div>

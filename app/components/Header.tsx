@@ -48,17 +48,21 @@ const Header = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 mb-12">
-              <a 
-                href="https://github.com/4yrg/gradeloop-core-v2" 
-                target="_blank" 
+              <a
+                href="https://github.com/4yrg/gradeloop-core-v2"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-8 py-4 rounded-2xl bg-primary text-on-primary font-bold shadow-xl shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-1 transition-all duration-300"
               >
                 <i className="ri-github-fill text-xl"></i>
                 View on GitHub
               </a>
-              <button 
-                onClick={() => document.getElementById('scope')?.scrollIntoView({ behavior: 'smooth' })}
+              <button
+                onClick={() =>
+                  document
+                    .getElementById('scope')
+                    ?.scrollIntoView({ behavior: 'smooth' })
+                }
                 className="flex items-center gap-2 px-8 py-4 rounded-2xl bg-surface-container border border-outline text-foreground font-bold hover:bg-surface-container/80 hover:-translate-y-1 transition-all duration-300"
               >
                 Explore Project
