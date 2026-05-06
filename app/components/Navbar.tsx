@@ -18,6 +18,7 @@ const navItems = [
     subItems: [
       { name: 'Documents', category: 'document' },
       { name: 'Presentations', category: 'presentation' },
+      { name: 'Checklists', category: 'checklist' },
     ],
   },
   { name: 'Team', href: '#team' },
