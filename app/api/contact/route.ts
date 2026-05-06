@@ -20,7 +20,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: `"${title} ${firstName} ${lastName}" <${process.env.GMAIL_USER}>`,
-      to: 'gradeloop.app@gmail.com',
+      to: 'contact.gradeloop@gmail.com',
       replyTo: email,
       subject: `[Portfolio] ${subject} from ${title} ${firstName} ${lastName}`,
       html: `
