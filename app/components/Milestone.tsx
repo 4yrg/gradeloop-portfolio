@@ -11,13 +11,13 @@ const milestones = [
     statusLabel: 'Completed',
   },
   {
-    date: 'January 2026',
-    title: 'Literature Review & Gap Analysis',
+    date: 'November 2025',
+    title: 'Core Research Gap Analysis',
     status: 'completed',
     statusLabel: 'Completed',
   },
   {
-    date: 'March 2026',
+    date: 'January 2026',
     title: 'Progress Presentation 1 (PP1)',
     status: 'completed',
     statusLabel: 'Completed',
