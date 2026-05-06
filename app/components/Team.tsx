@@ -68,9 +68,13 @@ const Team = () => {
                   <span className="text-xs font-bold text-primary uppercase tracking-widest mb-2">
                     {member.position}
                   </span>
-                  <h4 className="text-2xl md:text-3xl font-bold text-foreground mb-4 font-display">
+                  <h4 className="text-2xl md:text-3xl font-bold text-foreground mb-2 font-display">
                     {member.name}
                   </h4>
+                  <a href={`mailto:${member.email}`} className="flex items-center gap-2 text-primary hover:underline text-sm mb-4 font-medium">
+                    <i className="ri-mail-fill"></i>
+                    {member.email}
+                  </a>
                   <p className="text-base md:text-lg text-text-muted leading-relaxed">
                     {member.role}
                   </p>
@@ -111,13 +115,17 @@ const Team = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
                 <div className="text-left px-2">
-                  <h4 className="text-xl font-bold text-foreground mb-2 font-display group-hover:text-primary transition-colors">
+                  <h4 className="text-xl font-bold text-foreground mb-1 font-display group-hover:text-primary transition-colors">
                     {member.name}
                   </h4>
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="px-0 py-0.5 text-primary text-[13px] font-mono font-bold tracking-wider">
+                  <div className="flex flex-col gap-1 mb-4">
+                    <span className="text-primary text-[13px] font-mono font-bold tracking-wider">
                       {member.role}
                     </span>
+                    <a href={`mailto:${member.email}`} className="flex items-center gap-1.5 text-text-muted hover:text-primary text-xs transition-colors">
+                      <i className="ri-mail-line"></i>
+                      {member.email}
+                    </a>
                   </div>
                   <p className="text-sm md:text-base text-text-muted leading-relaxed">
                     {member.position}

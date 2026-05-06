@@ -4,6 +4,7 @@ export interface TeamMember {
   role: string;
   position: string;
   img: string;
+  email: string;
   researchInterest: string[];
 }
 
@@ -14,6 +15,7 @@ export const team: TeamMember[] = [
     role: 'Leading academic expert in Computer Science education with extensive research in learning technologies.',
     position: 'Primary Supervisor',
     img: '/team images/Prof. Nuwan.jpg',
+    email: 'nuwan.k@sliit.lk',
     researchInterest: ['CS Education', 'Learning Technologies'],
   },
   {
@@ -22,6 +24,7 @@ export const team: TeamMember[] = [
     role: 'Expert in technical systems and educational technology with a focus on AI-driven learning solutions.',
     position: 'Co-Supervisor',
     img: '/team images/Dr. Kalpani.jpg',
+    email: 'kalpani.m@sliit.lk',
     researchInterest: ['AI in Education', 'Educational Technology'],
   },
   {
@@ -30,6 +33,7 @@ export const team: TeamMember[] = [
     role: 'IT22204202',
     position: 'Backend architecture & automated assessment logic',
     img: '/team images/Wickramasooriya.W.T.D.png',
+    email: 'it22204202@my.sliit.lk',
     researchInterest: ['Backend Systems', 'Automated Assessment'],
   },
   {
@@ -38,14 +42,16 @@ export const team: TeamMember[] = [
     role: 'IT22548900',
     position: 'Frontend performance & user experience',
     img: '/team images/Bilal R A M.png',
+    email: 'it22548900@my.sliit.lk',
     researchInterest: ['UX Design', 'Performance Optimization'],
   },
   {
     id: 'dev-3',
     name: 'Dilshan J.M.H',
-    role: 'IT22204202',
+    role: 'IT22266828',
     position: 'ML-based code feedback research',
     img: '/team images/Dilshan J M H.png',
+    email: 'it22266828@my.sliit.lk',
     researchInterest: ['Machine Learning', 'Code Feedback'],
   },
   {
@@ -54,6 +60,7 @@ export const team: TeamMember[] = [
     role: 'IT22580344',
     position: 'Infrastructure & secure execution environments',
     img: '/team images/Jayasekara M P S S.png',
+    email: 'it22580344@my.sliit.lk',
     researchInterest: ['Cloud Infrastructure', 'Security'],
   },
 ];
