@@ -7,6 +7,7 @@ const systemComponents = [
   {
     code: 'CIPAS',
     name: 'Code Integrity & Provenance Analysis',
+    gap: 'Current tools lack integrated detection of AI-generated code alongside traditional syntactic/semantic clones, failing to identify complex provenance shifts in modern hybrid codebases.',
     features: [
       'Syntactic Code Clone detection (Type 1-3)',
       'Semantic Similarity detection',
@@ -18,6 +19,7 @@ const systemComponents = [
   {
     code: 'ACAFS',
     name: 'Automated Code Analysis and Feedback System',
+    gap: 'Existing autograders primarily focus on binary pass/fail results, lacking real-time, Socratic-style pedagogical feedback that guides students through logic errors without providing direct answers.',
     features: [
       'Intelligent Autograder (Semantic analysis)',
       'Socratic Style pedagogical Chatbot',
@@ -29,6 +31,7 @@ const systemComponents = [
   {
     code: 'BLAIM',
     name: 'Behavior & Learning Analytics and IDE Integration',
+    gap: 'There is a critical lack of integrated coding environments that link biometric-authenticated liveness with granular behavior analytics to verify the authenticity of the learning journey.',
     features: [
       'Isolated Cloud Coding Platform',
       'Biometric Authentication & Liveness',
@@ -40,6 +43,7 @@ const systemComponents = [
   {
     code: 'IVAS',
     name: 'Intelligent Viva Voce System',
+    gap: 'Manual oral assessments are unscalable for large cohorts, and current automated systems lack the depth to verify conceptual understanding through adaptive, context-aware dialogue.',
     features: [
       'Automated oral assessment generation',
       'Intelligent response evaluation',
@@ -111,6 +115,20 @@ const Components = () => {
                     </div>
                   </div>
 
+                  {/* Research Gap Section */}
+                  <div className="mb-8 p-5 rounded-2xl bg-background/50 border border-outline/20 group-hover:bg-background/80 transition-colors">
+                    <div className="flex items-center gap-2 mb-2">
+                      <i className="ri-search-eye-line text-primary text-sm"></i>
+                      <span className="text-[10px] font-black uppercase tracking-widest text-primary/80">Research Gap</span>
+                    </div>
+                    <p className="text-sm text-text-muted leading-relaxed italic">
+                      "{comp.gap}"
+                    </p>
+                  </div>
+
+                  <div className="mb-2">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-text-muted/60">Core Features</span>
+                  </div>
                   <ul className="space-y-4">
                     {comp.features.map((feature, fIndex) => (
                       <li key={fIndex} className="flex items-start gap-3">

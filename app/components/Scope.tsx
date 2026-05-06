@@ -13,9 +13,9 @@ const scopeItems = [
   },
   {
     id: 'gap',
-    title: 'Research Gap',
+    title: 'Core Research Gap',
     description:
-      'A significant gap exists in current solutions regarding real-time, context-aware feedback. Most tools focus on correctness, ignoring the educational value of actionable insights.',
+      'Current educational platforms fail to provide a unified framework that combines real-time behavior analytics, integrity verification, and pedagogically-aligned automated feedback. There is a critical lack of systems that can verify the authenticity of the learning process (not just the output) while scaling to large student cohorts without sacrificing the quality of personalized instruction.',
     icon: 'ri-search-eye-line',
   },
   {
